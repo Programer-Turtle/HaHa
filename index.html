@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+Button 
+{
+    background-color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: none;
+    color: cornflowerblue;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 64px;
+    cursor: pointer;
+    border-radius: 12px;
+    
+    
+    
+    
+
+}    
+
+button:hover 
+{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+h1
+{
+    color: darkblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+p
+{
+    color: darkblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 30px;
+}
+</style>
+</head>
+<body style="background-color: cornflowerblue;">
+
+<h1>Welcome</h1>
+<p style="text-align: center;"><button onclick="Activate()" class="Button ">Start HaHa</button></p>
+<p style="text-align: center;"><button id="aboutbutton"  onclick="about()" class="Button">About</button></p>
+<p id="about">HaHa is a webpage that mocks you by flying across the screen</p>
+
+<script>
+let clicked = 1;
+let abouttrigger = false;
+let clickedabout = 0;
+let clickedextra = 0;
+
+if (abouttrigger == false)
+{
+    document.getElementById("about").style.visibility = "hidden";
+    abouttrigger = false;
+}
+
+function Activate()
+    {
+        window.open("HaHa.html", clicked, "width=300, height=250")
+        clicked++
+    }
+
+    function about()
+    {
+        if (clickedabout == 0)
+        {
+            document.getElementById("about").style.visibility = "visible";
+            document.getElementById("aboutbutton").innerHTML = "Back";
+            clickedabout = 1;
+        }
+
+        else
+        {
+            document.getElementById("about").style.visibility = "hidden"
+            document.getElementById("aboutbutton").innerHTML = "About";
+            clickedabout = 0;
+        }
+    }
+
+    
+
+</script>
+
+
+
+
+</body>
+</html>
